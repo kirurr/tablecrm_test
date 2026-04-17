@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google"
-import Script from "next/script";
+// import Script from "next/script";
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -30,11 +30,11 @@ export default function RootLayout({
       )}
     >
 			<head>
-        <Script
-          src="//unpkg.com/react-scan/dist/auto.global.js"
-          crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
+        {/* <Script */}
+        {/*   src="//unpkg.com/react-scan/dist/auto.global.js" */}
+        {/*   crossOrigin="anonymous" */}
+        {/*   strategy="beforeInteractive" */}
+        {/* /> */}
       </head>
       <body>
         <Providers>
