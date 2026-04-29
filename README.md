@@ -1,21 +1,64 @@
-# Next.js template
+# TABLECRM Mobile Order Form
 
-This is a Next.js template with shadcn/ui.
+Mobile-first single-screen order form integrated with TABLECRM API. Designed for sales teams to create orders and sales directly from mobile devices.
 
-## Adding components
+## Screenshots
 
-To add components to your app, run the following command:
+![Mobile Order Form](docs/images/main.png)
 
-```bash
-npx shadcn@latest add button
+## Highlights
+
+- Token-based authentication with TABLECRM API validation
+- Customer search by name or phone with one-click selection
+- Order parameter configuration: organization, warehouse, paybox, price type, comments
+- Product search with add-to-cart functionality
+- Editable cart with quantity/price adjustment and real-time total calculation
+- Order creation with optional posting
+- Optimized rendering with React.memo and useCallback
+- Zod-validated API responses
+
+## Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Bun
+- shadcn/ui + Tailwind CSS
+- @tanstack/react-query
+- React Hook Form + Zod
+- sonner
+- Vercel
+
+## Flow
+
+1. Enter your TABLECRM API token to authenticate.
+2. Search and select a customer by name or phone.
+3. Set order parameters: organization, warehouse, paybox, price type, and comments.
+4. Search for products and add them to the cart.
+5. Adjust item quantities, prices, and review the total in the cart.
+6. Create the order (with or without posting).
+
+## Structure
+
+```text
+app/            routes and layouts
+components/     UI and feature components (order form, auth, cart, etc.)
+hooks/          React Query API hooks
+lib/            API client and Zod schemas
+docs/images/    README assets
 ```
 
-This will place the ui components in the `components` directory.
+## Run
 
-## Using components
+```bash
+bun install
+bun run dev
+```
 
-To use the components in your app, import them as follows:
+Open `http://localhost:3000`.
 
-```tsx
-import { Button } from "@/components/ui/button";
+Production:
+
+```bash
+bun run build
 ```
